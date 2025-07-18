@@ -55,7 +55,6 @@ body{
   display: flex;
   flex-direction: column;
   flex-grow: 1; 
-  overflow-y: auto; 
 }
 
 .side-header__menu {
@@ -94,8 +93,8 @@ ul {
 }
 
 .main-side__menu {
-  flex-grow: 1; 
-  overflow-y: auto; 
+flex-grow: 1; 
+ min-height:50vh; 
 }
 
 .main-side__menu__list {
