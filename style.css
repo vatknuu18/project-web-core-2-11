@@ -1,0 +1,184 @@
+:root{
+  --read-more: #41F6D7;
+  --text-color: #1B1C21;
+  --text-color-thin:#7E7E82;
+}
+
+@font-face {
+    font-family:'TT Lakes';
+    src: url('/assets/img/fonts/TTLakes-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'TT Lakes';
+    src: url('/assets/img/fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'TT Lakes';
+    src: url('/assets/img/fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 16px;
+  width: 320px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.side-header{
+  flex-shrink: 0;
+}
+
+.main-side {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  overflow-y: auto; 
+}
+
+.side-header__menu {
+  display: flex;
+  align-items: center; 
+  width: 100%; 
+  padding: 23px 24px 16px 24px; 
+  box-sizing: border-box; 
+}
+
+
+.side-header__button,
+.contacts__button{
+background: none;
+border: none;
+ text-decoration: none;
+ cursor: pointer;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.side-header__button[aria-label="Открыть меню"] {
+  margin-right: 16px; 
+}
+
+/* Для кнопки поиска */
+.side-header__button[aria-label="Поиск по сайту"] {
+  margin-left: auto; 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+}
+
+.main-side__menu {
+  flex-grow: 1; 
+  overflow-y: auto; 
+}
+
+.main-side__menu__list {
+  padding-top: 20px; 
+}
+
+.main-side__list {
+  padding-bottom: 32px;
+  padding-left: 24px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-side__list:hover {
+  color: var(--text-color-thin);
+}
+
+.main-side__list-active {
+  color: var(--text-color-thin);
+}
+
+.main-side__list-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-90%);
+  width: 4px;
+  height: 40px;
+  background-color: var(--read-more);
+  border-radius: 0 4px 4px 0;
+  display: block;
+}
+
+/* Секция контактов */
+.contacts {
+flex-shrink: 0;
+padding: 16px 24px;
+gap: 16px;
+display: flex;
+}
+
+/* Футер */
+.info {
+ flex-shrink: 0;
+padding: 16px 24px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.mail-contact {
+    font-size: 16px;
+    font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.number-contact {
+
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.select-lang {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 8px;
+  padding-top: 40px;
+}
+
+.select-lang > div {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.select-lang > div:hover {
+  color: var(--text-color-thin);
+}
